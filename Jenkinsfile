@@ -39,7 +39,7 @@ pipeline {
                   var2.echoFromGroovy()
                   var2.echoFromGroovyInput("Input from Jenkinsfile")
                   def var1 = load "vars/t1.groovy"
-                  var1.getAll()
+                  var1.getInstance()
                 }
             }
         }
