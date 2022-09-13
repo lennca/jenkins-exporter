@@ -4,3 +4,5 @@ def echoFromGroovy() {
 def echoFromGroovyInput(arg) {
   echo "Hello from Groovy $arg"
 }
+
+return this
