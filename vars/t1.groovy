@@ -2,7 +2,7 @@
 /* groovylint-disable-next-line NoDef */
 import jenkins.model.Jenkins
 
-jenkins = Jenkins.instance
+def jenkins = Jenkins.instance
 
 def getInstance() {
     def test = jenkins.getJobNames()
