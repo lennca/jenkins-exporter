@@ -24,7 +24,7 @@ pipeline {
                     sh 'docker pull ubuntu:20.04'
                     sh 'docker run -dit ubuntu:20.04'
                   }
-                  cathc (Exception e) {
+                  catch (Exception e) {
                     echo "Exception:"
                     echo e.getMessage()
                   }
@@ -38,7 +38,7 @@ pipeline {
                     main.echoFromGroovy()
                     main.echoFromGroovyInput("Input from Jenkinsfile")
                   }
-                  cathc (Exception e) {
+                  catch (Exception e) {
                     echo "Exception:"
                     echo e.getMessage()
                   }
