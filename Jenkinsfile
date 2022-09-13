@@ -1,3 +1,7 @@
+libraries {
+  lib('pipeline-library-demo')
+}
+
 pipeline {
     agent any
 
@@ -35,8 +39,9 @@ pipeline {
             steps {
                 script {
                   try {
-                    main.echoFromGroovy()
-                    main.echoFromGroovyInput("Input from Jenkinsfile")
+                    def var2 = load "main.groovy"
+                    var2.echoFromGroovy()
+                    var2.echoFromGroovyInput("Input from Jenkinsfile")
                   }
                   catch (Exception e) {
                     echo "Exception:"
