@@ -2,10 +2,8 @@
 /* groovylint-disable-next-line NoDef */
 import jenkins.model.Jenkins
 
-def jenkins = Jenkins.instance
-
 def getInstance() {
-    def test = jenkins.getJobNames()
+    def test = Jenkins.instance.getJobNames()
     if (test == null) {
         echo 'Null!!!!'
         return
