@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone git Repository') {
+/*         stage('Clone git Repository') {
             steps {
                 script {
                     try {
@@ -30,20 +30,14 @@ pipeline {
                   }
                 }
             }
-        }
+        } */
         stage('Run Groovy script') {
             steps {
                 script {
-                  try {
-                    sh "ls"
-                    def var2 = load "main.groovy"
-                    var2.echoFromGroovy()
-                    var2.echoFromGroovyInput("Input from Jenkinsfile")
-                  }
-                  catch (Exception e) {
-                    echo "Exception:"
-                    echo e.getMessage()
-                  }
+                  sh "ls"
+                  def var2 = load "main.groovy"
+                  var2.echoFromGroovy()
+                  var2.echoFromGroovyInput("Input from Jenkinsfile")
                 }
             }
         }
