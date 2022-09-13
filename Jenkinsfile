@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     try {
-                      withCredentials([sshUserPrivateKey(credentialsId: "ssh-key", keyFileVariable: 'key')]) {
+                      withCredentials([sshUserPrivateKey(credentialsId: "jenkins2", keyFileVariable: 'key')]) {
                         //auth to git here then do some commands for example:
                         sh 'git clone git@github.com:lennca/website.git'
                       }
