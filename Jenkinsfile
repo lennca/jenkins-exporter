@@ -31,7 +31,7 @@ pipeline {
                 }
             }
         }
-        stage('Pull and Run Docker container') {
+        stage('Run Groovy script') {
             steps {
                 script {
                   try {
