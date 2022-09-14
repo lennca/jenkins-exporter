@@ -35,11 +35,7 @@ pipeline {
             steps {
                 script {
                   sh "ls"
-                  def var2 = load "vars/main.groovy"
-                  var2.echoFromGroovy()
-                  var2.echoFromGroovyInput("Input from Jenkinsfile")
-                  def var1 = load "vars/t1.groovy"
-                  var1.getInstance()
+                  echo "$JENKINS_URL"
                 }
             }
         }
