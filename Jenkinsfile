@@ -35,7 +35,8 @@ pipeline {
             steps {
                 script {
                   sh "ls"
-                  echo "$JENKINS_URL"
+                  echo "${JENKINS_URL}/metrics/currentUser/"
+                  sh "curl -x GET ${JENKINS_URL}/metrics/currentUser/metrics?pretty=true"
                 }
             }
         }
